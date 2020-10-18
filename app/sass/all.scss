@@ -34,6 +34,9 @@ body{
 	display: flex;
 	min-height: 100%;
 }
+.flex-column{
+	flex-direction: column;
+}
 .main{
 	flex: 1 0 auto;
 }
@@ -337,7 +340,7 @@ table{
 		}
 	}
 	.bottom{
-		padding: 0 20px 15px;
+		padding: 10px 20px 15px;
 		ul{
 			border-top: 1px solid #fff;
 			font-size: 12px;
@@ -412,5 +415,31 @@ table{
 			border: 0 !important;
 			font-weight: bold;
 		}
+	}
+}
+.wrapper{
+	&.d-table{
+		height: 100% !important;
+	}
+}
+.d-table{
+	display: table !important;
+	table-layout: fixed;
+	.sidebar,.content{
+		display: table-cell;
+		height: 100%;
+	}
+	.sidebar{
+		width: 250px;
+	}
+}
+.sidebar_cont{
+	// background: #ccc;
+	height: 100%;
+	.top{
+		flex: 1 0 auto;
+	}
+	.bottom{
+		flex: 0 0 auto;
 	}
 }
