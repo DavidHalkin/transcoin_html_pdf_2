@@ -17,7 +17,7 @@ article, aside, audio, canvas, datalist, details, figcaption, figure, footer, he
 
 html, body { height: 100%; }
 
-body { font-family: 'Inter', sans-serif; position: relative; width: 21cm; margin: 0 auto; color: #000; background: #fff; font-size: 14px; }
+body { font-family: 'Inter', sans-serif; position: relative; margin: 0; color: #000; background: #fff; font-size: 14px; }
 
 .wrapper { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; min-height: 100%; }
 
@@ -177,11 +177,11 @@ table .separator td:after { content: ""; width: 100%; height: 1px; position: abs
 
 .wrapper.d-table { height: 100% !important; }
 
+.wrapper.d-table .sidebar, .wrapper.d-table .content { display: table-cell; height: 100%; }
+
+.wrapper.d-table .sidebar { width: 250px; }
+
 .d-table { display: table !important; table-layout: fixed; }
-
-.d-table .sidebar, .d-table .content { display: table-cell; height: 100%; }
-
-.d-table .sidebar { width: 250px; }
 
 .sidebar_cont { height: 100%; }
 

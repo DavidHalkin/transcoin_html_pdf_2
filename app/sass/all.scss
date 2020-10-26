@@ -21,9 +21,10 @@ html,body{
 body{
 	font-family: 'Inter', sans-serif;
 	position: relative;
-	width: 21cm;
+	// width: 21cm;
 	// height: 29.7cm;
-	margin: 0 auto;
+	// margin: 0 auto;
+	margin: 0;
 	color: #000;
 	background: #fff;
 	font-size: 14px;
@@ -420,18 +421,18 @@ table{
 .wrapper{
 	&.d-table{
 		height: 100% !important;
+		.sidebar,.content{
+		display: table-cell;
+			height: 100%;
+		}
+		.sidebar{
+			width: 250px;
+		}
 	}
 }
 .d-table{
 	display: table !important;
 	table-layout: fixed;
-	.sidebar,.content{
-		display: table-cell;
-		height: 100%;
-	}
-	.sidebar{
-		width: 250px;
-	}
 }
 .sidebar_cont{
 	// background: #ccc;
