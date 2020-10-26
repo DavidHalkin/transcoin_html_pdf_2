@@ -280,12 +280,12 @@ table{
 	}
 }
 .content{
-	flex-basis: 0;
-	flex-grow: 1;
-	max-width: 100%;
+	// flex-basis: 0;
+	// flex-grow: 1;
+	// max-width: 100%;
 	padding: 20px 20px 15px 10px;
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
 	h1{
 		margin: 0 0 8px 0;
 		font-size: 26px;
@@ -306,13 +306,13 @@ table{
 	}
 }
 .sidebar{
-	max-width: 250px;
-	flex:0 0 250px;
+	// max-width: 250px;
+	// flex:0 0 250px;
 	background: #181B25;
 	color: #fff;
-	padding:30px 15px 15px;
-	flex-direction: column;
-	display: flex;
+	
+	// flex-direction: column;
+	// display: flex;
 	.logo_s{
 		padding-bottom: 30px;
 		img{
@@ -320,40 +320,30 @@ table{
 		}
 	}
 	.top{
+		padding:30px 15px 15px;
 		p{
 			font-size: 12px;
 			padding-bottom: 15px;
-			position: relative;
-			&:after{
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				transform:translateX(-50%);
-				width: 200px;
-				height: 1px;
-				background: #fff;
-			}
+			// position: relative;
+			// &:after{
+			// 	content: "";
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	left: 50%;
+			// 	transform:translateX(-50%);
+			// 	width: 200px;
+			// 	height: 1px;
+			// 	background: #fff;
+			// }
 		}
 		ul{
 			font-size: 12px;
 			padding-top: 15px;
 		}
 	}
-	.bottom{
-		padding: 10px 20px 15px;
-		ul{
-			border-top: 1px solid #fff;
-			font-size: 12px;
-			li{
-				padding-top: 15px;
-			}
-			span{
-				padding-left: 6px;
-			}
-		}
-	}
+	
 }
+
 .text_green{
 	color: #0F7B7B;
 }
@@ -418,29 +408,53 @@ table{
 		}
 	}
 }
+.text-left{
+	text-align: left !important;
+}
+.separator_sidebar{
+	height: 1px;
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+}
+.bottom_info{
+	padding: 10px 20px 15px;
+	margin-top: 100px;
+	table{
+		border-top: 1px solid #fff;
+		padding-top: 0 !important;
+	}
+	td{
+		font-size: 10px;
+		color: #fff;
+		line-height: 12px;
+		padding-top: 15px !important;
+		padding-bottom: 0 !important;
+	}
+}
 .wrapper{
-	&.d-table{
-		height: 100% !important;
-		.sidebar,.content{
-		display: table-cell;
-			height: 100%;
-		}
-		.sidebar{
-			width: 250px;
-		}
+	display: block !important;
+	width: 100%;
+	// overflow: hidden;
+	position: relative;
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
 	}
-}
-.d-table{
-	display: table !important;
-	table-layout: fixed;
-}
-.sidebar_cont{
-	// background: #ccc;
-	height: 100%;
-	.top{
-		flex: 1 0 auto;
+	.l_content{
+		width: 70%;
 	}
-	.bottom{
-		flex: 0 0 auto;
+	.sidebar{
+		width: 30%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0;
+		height: 100%;
+		margin: 0;
+	}
+	.sidebar,.l_content{
+		float: left;
 	}
 }
